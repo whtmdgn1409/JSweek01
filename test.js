@@ -7,7 +7,8 @@ function assert(expect, answer) {
 }
 const truthTable = {
   and: [[0, 0, 0], [0, 1, 0], [1, 0, 0], [1, 1, 1]],
-  or: [[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]]
+  or: [[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]],
+  not: [[0, 1], [1, 0]]
 };
 
 module.exports = {
