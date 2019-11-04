@@ -1,68 +1,31 @@
 function andFunc(a, b) {
 	if(a){ 
 		if(b){ 
-			return a; // a&&b return a
+			return true; // a&&b return a
 		}else{
-			return b; // a&&b return b
+			return false; // a&&b return b
 		}
+	}else {
+		return false; 
 	}
 }
 
 function orFunc(a, b) {
 	if(a){
-		if(b){
-			return a;
-		}
+		return true;
 	}else {
 		if(b){
-			return b;
+			return true;
 		}else {
 			return false;		
 		}
 	}
 }
 
-function notFunc(a, b) {
-	var c = a;
+function notFunc(a) {
 	if(a){
-		if(b){
-			return false; 
-		}else {
-			return true; 
-		}
+		return false;
 	}else {
-		if(b){
-			return true; 
-		}else {
-			return false;
-		}
+		return true;
 	}
 }
-
-
-
-
-////////////////////////////
-
-
-function Area(figure, first, ...second){
-	var result = 0;
-	if(figure == 'circle'){
-		result = 3.14*first*first;
-	}
-	if(figure == 'triangle'){
-		result = 0.5*first*second;
-	}
-	if(figure == 'square'){
-		result = first*first;
-	}
-	if(figure == 'rect'){
-		result = first*second;
-	}
-	return result;
-}
-
-
-
-
-///////////////////////////
