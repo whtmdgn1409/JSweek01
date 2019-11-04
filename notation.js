@@ -1,7 +1,7 @@
 // notation
 function tenTo2(a) {
     var half;
-    var result=[];
+    var result = [];
 
     while(a>1){
         half = Math.floor(a/2);
@@ -12,5 +12,12 @@ function tenTo2(a) {
     return result;
 }
 
-//a.toString(2); 
-//a.toString(10);
+function twoTo10(...args) {
+    var length = args.length;
+    var result = 0;
+    for(var i=0; i<length; i++){
+        result += args[length-1-i] * Math.pow(2,i);
+        console.log(result);
+    }
+    return result; 
+}
