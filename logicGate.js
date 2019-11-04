@@ -1,4 +1,5 @@
-function andFunc(a, b) {
+// Logic Gate
+function andFunc2(a, b) {
 	if(a){ 
 		if(b){ 
 			return true; // a&&b return a
@@ -10,13 +11,13 @@ function andFunc(a, b) {
 	}
 }
 
-function andFunc2(a,b){
+function andFunc(a,b){
     return (a ? (b? true : false) : false);
 }
 
 ///////////////////////////////////////////
 
-function orFunc(a, b) {
+function orFunc2(a, b) {
 	if(a){
 		return true;
 	}else {
@@ -28,13 +29,13 @@ function orFunc(a, b) {
 	}
 }
 
-function orFunc2(a,b){
+function orFunc(a,b){
     return (a ? true : (b ? true : false));
 }
 
 ///////////////////////////////////////////
 
-function notFunc(a) {
+function notFunc2(a) {
 	if(a){
 		return false;
 	}else {
@@ -42,6 +43,63 @@ function notFunc(a) {
 	}
 }
 
-function notFunc2(a) {
+function notFunc(a) {
     return (a ? false : true);
 }
+
+
+/// Arithmetic Operators
+var carryOut;
+var carryIn;
+var sum;
+
+function halfAdder2(a, b) {
+    if(andFunc(a,b)){
+        carryOut = true;
+        sum = false;
+    }else {
+        carryOut = false;
+        sum = false;
+    }
+    if(orFunc(a, b)){
+        carryOut = false;
+        sum = true;
+    }
+}
+
+function halfAdder(a, b) {
+    return (andFunc(a,b) ? (
+        carryOut = true, sum = false
+        ) : (
+            carryOut=false, sum=false
+        )
+    );
+}
+
+function fullAdder2(a, b, c) { // c: carry in
+    if(c){
+        if(andFunc(a, b)) {
+            carryOut = true;
+            sum = true;
+        }else if(orFunc(a, b)){
+            carryOut = true;
+            sum = false; 
+        }else {
+            carryOut = false; 
+            sum = true; 
+        }
+    }else {
+        return halfAdder(a,b);
+    }
+}
+
+function fullAdder(a, b, c) {
+    return (c ? 
+        (andFunc(a,b) ? 
+            (carryOut=true, sum=true)
+            :(orFunc(a,b) ? 
+                (carryOut=true, sum=false)
+            : (carryOut = false, sum = true)))
+        : halfAdder(a,b));
+}
+
