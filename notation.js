@@ -1,4 +1,4 @@
-// notation
+// 3. notation
 function tenTo2(a) {
     var half;
     var result = [];

@@ -1,4 +1,4 @@
-/// Logic Gate
+/// 1. Logic Gate
 function andFunc(a,b){
     return (a ? (b? true : false) : false);
 }
@@ -13,7 +13,7 @@ function notFunc(a) {
     return (a ? false : true);
 }
 
-/// Arithmetic Operators
+/// 2. Arithmetic Operators
 var carryOut;
 var carryIn;
 var sum;
@@ -36,3 +36,13 @@ function fullAdder(a, b, c) {
             : (carryOut = false, sum = true)))
         : halfAdder(a,b));
 }
+
+
+/// 4. Application (NaN이라 다시해야합니당)
+// function getSum(a, b) { //length는 같다고 가정
+//     var result;
+//     for(var i=a.length-1; i>=0; i--){
+//         (i == a.length-1) ? result += (andFunc(a[i], b[i]) ? 1 : 0) : (carryIn = true ? result += (fullAdder(a[i], b[i], true) ? 1 : 0) : result += (fullAdder(a[i], b[i]? 1 : 0)));
+//     }
+//     return result; 
+// }
