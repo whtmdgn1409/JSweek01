@@ -102,4 +102,3 @@ function fullAdder(a, b, c) {
             : (carryOut = false, sum = true)))
         : halfAdder(a,b));
 }
-
