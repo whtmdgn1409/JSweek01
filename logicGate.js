@@ -10,6 +10,12 @@ function andFunc(a, b) {
 	}
 }
 
+function andFunc2(a,b){
+    return (a ? (b? true : false) : false);
+}
+
+///////////////////////////////////////////
+
 function orFunc(a, b) {
 	if(a){
 		return true;
@@ -22,10 +28,20 @@ function orFunc(a, b) {
 	}
 }
 
+function orFunc2(a,b){
+    return (a ? true : (b ? true : false));
+}
+
+///////////////////////////////////////////
+
 function notFunc(a) {
 	if(a){
 		return false;
 	}else {
 		return true;
 	}
+}
+
+function notFunc2(a) {
+    return (a ? false : true);
 }
