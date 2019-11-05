@@ -144,3 +144,27 @@ console.log(H.h);
 H.plusArrowFunction(10);
 console.log(H.h);
 ```
+
+<기본 문법 문제풀이>
+
+1. 답 20
+   => var 는 함수스코프를 갖는다.
+2. 답 10
+   => var 로 선언한 변수는 함수 스코프를 갖기 때문에 반복문 밖에서 변수를 접근할 수 있다.
+3. 답 10
+4. 답 cccc
+   => console.log(cc)할 때 cc는 print 스코프에서 찾을 수 없다. 따라서 상위 스코프인 전역 변수 cc에 접근
+5. 답 false, true
+   => null: 비어있다, undefined : 정의x
+6. 답 true, false, false
+   => 원시형 : 값을 비교/ 참조형 : 메모리 주소 비교
+7. 답 1f, 3f, 7 , true, false, true, true
+   => 숫자+문자=문자/
+   숫자+불리언=숫자/
+   형변환..ㅎ
+8. 답 undefined, object
+   => null이 object 는자바스크립트 설계? 오류
+
+9. 답 10,20
+   => 매소드 안의 내부함수의 this는 window를 가르키니까 10,
+   같은 내부함수라도 화살표 함수의 this 상위 스코프에 의해서 결정이 되므로 20
