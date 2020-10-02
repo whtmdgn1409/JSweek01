@@ -68,7 +68,7 @@ console.log(c);
 var cc = "cccc";
 
 function print() {
-  console.log(cc); // cccc
+  console.log(cc);
 }
 
 function wrap() {
@@ -118,6 +118,33 @@ console.log(typeof g);
 ```
 
 9.
+
+```javascript
+function foo9(i) {
+   console.log(i);
+   
+   var i = 20;
+   
+   console.log(i);
+   
+   console.log(j);
+   
+   var j = function () { }
+   
+   var i = 30;
+   
+   console.log(i);
+   
+   function i () { }
+   
+   console.log(i);
+}
+
+foo9(10);
+```
+
+
+10.
 
 ```javascript
 function foo8() {
